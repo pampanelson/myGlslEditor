@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>glslEditor local</title>
+    <style type="text/css">
+    body {
+        background: gray;
+    }
+    </style>
+    <link type="text/css" rel="stylesheet" href="./glslEditor.css">
+    <script type="application/javascript" src="./glslEditor.js"></script>
+</head>
+<body>
+    <div id="glsl_editor"></div>
+</body>
+<script type="text/javascript">
+const glslEditor = new GlslEditor('#glsl_editor', {
+    canvas_size: 800,
+    canvas_draggable: true,
+    theme: 'monokai',
+    multipleBuffers: true,
+    watchHash: true,
+    fileDrops: true,
+    menu: true
+});
+</script>
+
+</html>
+<!-- Property			type		description	default ----------------------------------------------------------------------
+canvas_size				number		Initial square size of the shader canvas	250
+canvas_width			number		Initial width of the shader canvas	250
+canvas_height			number		Initial height of the shader canvas	250
+canvas_draggable		bool		Enables dragging, resizing and snaping capabilities to the shader canvas	false
+canvas_follow			bool		Enables the shader canvas to follow the curser	false
+theme					string		Codemirror style to use on the editor	"default"
+menu					bool		Adds a menu that contain: 'new', 'open', 'save' and 'share' options	false
+multipleBuffers			bool		Allows the creation of new tabs	false
+fileDrops				bool		Listen to Drag&Drop events	false
+watchHash				bool		Listen to changes on the wash path to load files	false
+frag_header				string		Adds a hidden header to every shader before compiling	""
+frag_footer				string		Adds a hidden footer to every shader before compiling	""
+ ------------------------------------------------------------------------------------------------------------------------------->
